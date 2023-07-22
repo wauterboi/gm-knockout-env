@@ -10,17 +10,17 @@ package.path = table.concat {
 
 (name) ->
   fragment = string.gsub name, '%.', '/'
-  filepaths = string.gsub filepaths, '?', fragment
+  filepaths = string.gsub package.path, '?', fragment
 
   log = for filepath in string.gmatch filepaths, '([^;]+);'
     if exists filepath, 'LUA'
       return {
         :filepath
         loader: ->
-          setfenv(compile(filepath), knockout)!
+          setfenv(compile(filepath), package.loaded.knockout)!
         type: 'path'
       }
     else
-      string.format 'no file `%s` found for module `%s`', filepath, name
+      string.format 'path: no file `%s` found for module `%s`', filepath, name
 
   nil, table.concat log, '\n'

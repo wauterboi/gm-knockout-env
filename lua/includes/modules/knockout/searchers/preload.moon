@@ -9,4 +9,4 @@ package.preload = {}
       type: 'preload'
     }
   else
-    nil, string.format 'no per-module loader for `%s`', name
+    nil, string.format 'preload: no per-module loader for `%s`', name

@@ -13,4 +13,4 @@ setfenv 1, package.loaded.knockout
       type: 'binary'
     }
   else
-    nil, string.format 'no binary found for module `%s`', name
+    nil, string.format 'binary: no binary found for module `%s`', name

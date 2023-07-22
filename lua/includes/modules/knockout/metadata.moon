@@ -6,12 +6,14 @@ metadata = do
   metatable = {}
 
   metatable.__index = (name) =>
-    log = for searcher in *package.searchers
+    log = for searcher in *package.loaders
       meta, err = searcher name
+      print name, meta
       if meta
         @[name] = meta
         return meta
-      else err
+      else
+        err
 
     error(
       string.format(

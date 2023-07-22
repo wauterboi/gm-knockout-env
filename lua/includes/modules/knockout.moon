@@ -1,4 +1,4 @@
--- if lookup = package.loaded['knockout'] then return lookup
+if lookup = package.loaded['knockout'] then return lookup
 
 AddCSLuaFile!
 
@@ -13,8 +13,8 @@ package.loaded.stock_require = require
 
 setfenv 1, environment
 
-package.metadata = include 'includes/modules/knockout/metadata.lua'
 package.loaders = include 'includes/modules/knockout/searchers.lua'
+package.metadata = include 'includes/modules/knockout/metadata.lua'
 
 require = (name) ->
   if lookup = package.loaded[name] then return lookup
