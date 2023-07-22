@@ -6,6 +6,9 @@ setfenv 1, package.loaded.knockout
 package.path = table.concat {
   '?.lua'
   '?/init.lua'
+  'luarocks/share/lua/5.1/?.lua'
+  'luarocks/share/lua/5.1/?/init.lua'
+  'luarocks/lib/lua/5.1/?.lua'
 }, ';'
 
 (name) ->

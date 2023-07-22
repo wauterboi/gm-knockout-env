@@ -1,5 +1,20 @@
 AddCSLuaFile!
 
+--- # `package.loaded.knockout: table` (shared)
+---
+--- ## Description
+---
+--- This table serves as an alternative global environment used extensively
+--- by the `knockout` addon. It is used by modules found via its `package.path`
+--- keyvalue.
+---
+--- ## Warning
+---
+--- * The copy of the `string` table is not used as the metatable when
+---   interacting with strings. This is because there is a lot of Garry's Mod
+---   code that calls methods on strings that need to remain to prevent issues.
+---   As a result, calling `local x = 'Hi!':EndsWith('!')` is valid regardless
+---   of environment.
 environment = {
   :_VERSION
   :assert
