@@ -79,11 +79,12 @@ forward slashes. You're free to modify this path to your needs, however you
 probably shouldn't remove anything from it.
 
 Also, in Lua 5.1 fashion, you have to use periods in place of slashes and drop
-the file extension. For example, don't do 'a/s/d/f.lua` - do `a.s.d.f`.
+the file extension. For example, don't do `a/s/d/f.lua` - do `a.s.d.f`.
 
 # Installation
 
-Extract the latest release to your Garry's Mod addons folder.
+~~Extract the latest release to your Garry's Mod addons folder.~~ No releases,
+yet.
 
 # Building from source
 
