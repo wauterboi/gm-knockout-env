@@ -10,19 +10,6 @@ include_searcher = (name) ->
   add_client_file filepath
   include filepath
 
---- # `package.loaders: table` (shared)
----
---- ## Description
----
---- An array of searcher functions ordered from highest precedence to lowest.
---- Searcher functions must return either a module metadata structure or
---- `nil` and an error message.
----
---- ## See
----
---- * `includes/modules/knockout/metadata.moon` for the implementation of
----   `package.metadata`, including its metamagic and expected metadata
----   structure
 {index, include_searcher name for index, name in ipairs{
   'preload'
   'binary'
